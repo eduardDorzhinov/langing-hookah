@@ -1,0 +1,96 @@
+@import 'variables';
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth !important;
+}
+
+body {
+  color: $color-black;
+}
+
+#modal-root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo-hp {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0 0;
+
+  &_2 {
+    margin-bottom: 3rem;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  width: 90vw;
+  padding: 1.56rem 3.125rem;
+  margin: 0 auto;
+}
+
+section {
+  margin-top: $section-margin / 2;
+
+  & .section_title {
+    margin: 0 auto calc($section-margin / 3);
+    width: fit-content;
+  }
+}
+
+.carousel.carousel-slider .control-arrow {
+  padding: 15px;
+  opacity: 0.8;
+}
+
+@import 'sections/welcome-section';
+@import 'sections/about-section';
+@import 'sections/product-section';
+@import 'sections/positives-section';
+@import 'sections/target-section';
+@import 'sections/price-section';
+@import 'sections/gallery-section';
+@import 'sections/contacts-section';
+@import 'sections/faq-section';
+
+// ============= FAQ =============
+
+// ************ 1000px < width < 1200px ************
+@media (max-width: 1200px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+// ************ 800px < width < 1000px ************
+@media (max-width: 1000px) {
+  html {
+    font-size: 70%;
+  }
+
+  section {
+    .section_title {
+      margin: 0 auto calc($section-margin / 4);
+      width: fit-content;
+    }
+  }
+}
+
+// ************ 320px < width < 500px ************
+@media (max-width: 500px) {
+  .container {
+    width: 100vw;
+    padding: 1.56rem 1.125rem;
+  }
+}
+
+// ************ width < 320px ************
+@media (max-width: 320px) {
+  html {
+    font-size: 60%;
+  }
+}

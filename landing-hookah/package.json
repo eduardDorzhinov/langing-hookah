@@ -1,0 +1,36 @@
+{
+  "name": "hp-limassol-catering",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/node": "20.2.3",
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.2.4",
+    "axios": "^1.4.0",
+    "classnames": "^2.3.2",
+    "eslint": "8.41.0",
+    "eslint-config-next": "13.4.3",
+    "js-cookie": "^3.0.5",
+    "next": "13.4.3",
+    "next-translate": "^1.6.0",
+    "next-videos": "1.4.1",
+    "nodemailer": "^6.9.2",
+    "prettier": "^2.8.8",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
+    "react-responsive-carousel": "^3.2.23",
+    "sass": "^1.62.1",
+    "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.3",
+    "next-translate-plugin": "^2.0.5"
+  }
+}

@@ -1,0 +1,77 @@
+@import 'src/styles/variables';
+
+.contacts {
+  margin-top: 0;
+  padding-top: 50px;
+
+  &--cards {
+    & .contacts_card {
+      height: 8.75rem;
+      padding: 1rem;
+      background: $color-background2;
+      margin: 1rem;
+
+      &--link {
+        padding-left: 1rem;
+
+        &:hover {
+          opacity: 0.9;
+          text-decoration-color: $color-red;
+        }
+
+        &-number {
+          text-decoration: none;
+
+          &:hover {
+            color: $color-red;
+          }
+        }
+      }
+
+      &--socials {
+        font-size: 2.5rem;
+        padding: 0.25em 1rem;
+
+        & > * {
+          margin-right: 1rem;
+          cursor: pointer;
+          color: $color-black;
+          transition: color 0.1s ease-in-out, opacity 0.1s ease-in-out;
+
+          &:hover {
+            color: $color-red;
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ************ 800px < width < 1000px ************
+@media (max-width: 1000px) {
+  .contacts {
+    padding-top: 50px;
+  }
+}
+
+// ************ width < 500px ************
+@media (max-width: 500px) {
+  .contacts {
+    &--cards {
+      & .contacts_card {
+        height: fit-content;
+        padding: 1rem 1rem 1rem 2rem;
+
+        &--title {
+          margin-left: -1rem;
+        }
+
+        &--link {
+          font-size: 2rem;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

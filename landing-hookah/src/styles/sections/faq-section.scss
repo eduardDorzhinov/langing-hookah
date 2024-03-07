@@ -1,0 +1,10 @@
+@import 'src/styles/variables';
+
+.faq {
+  padding-top: 0;
+  margin-top: 0;
+
+  &--answer {
+    margin-bottom: 3rem;
+  }
+}

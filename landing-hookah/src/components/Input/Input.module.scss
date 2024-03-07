@@ -1,0 +1,131 @@
+@import '../../styles/variables';
+
+.input {
+  position: relative;
+  margin-bottom: 0.5em;
+
+  & > input,
+  textarea {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+    padding: 0.67857143em 1em;
+
+    outline: 0;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    text-align: left;
+    line-height: 1.21428571em;
+    background: #ffffff;
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    color: $color-black;
+    border-radius: 0.28571429rem;
+    -webkit-transition: border-color 0.1s ease, -webkit-box-shadow 0.1s ease;
+    transition: box-shadow 0.1s ease, border-color 0.1s ease, -webkit-box-shadow 0.1s ease;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+
+    &:active {
+      border-color: rgba(0, 0, 0, 0.3);
+      background: #fafafa;
+      color: $color-black;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    &:focus {
+      border-color: #85b7d9;
+      background: $color-white;
+      color: $color-black;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+
+  & > textarea {
+    height: 8rem;
+  }
+}
+
+.disabled {
+  & > input,
+  textarea {
+    opacity: 0.45;
+
+    &:active {
+      border-color: rgba(34, 36, 38, 0.15);
+      background: #ffffff;
+      color: rgba(0, 0, 0, 0.87);
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.error {
+  & > input,
+  textarea {
+    background-color: #fff6f6;
+    border-color: #e0b4b4;
+    color: #9f3a38;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+    &:active {
+      background-color: #fff6f6;
+      border-color: #e0b4b4;
+      color: #9f3a38;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    &:focus {
+      background-color: #fff6f6;
+      border-color: #e0b4b4;
+      color: #9f3a38;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.withLabel {
+  label {
+    position: absolute;
+    top: 8px;
+    left: 5%;
+    transition: all 200ms;
+    pointer-events: none;
+    transform-origin: 0 50%;
+    transform: translate(-4%, -90%) scale(0.8);
+    padding: 0 0.6rem;
+    background: #ffffff;
+    opacity: 1;
+    border-radius: 0.28em;
+    font-size: 1.2rem;
+  }
+}
+
+.required {
+  &:after {
+    content: '*';
+    color: $color-red;
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 500px) {
+  .input {
+    & > input,
+    textarea {
+      font-size: 1.8rem;
+      line-height: 2rem;
+    }
+
+    & > label {
+      font-size: 1.8rem;
+      top: 12px;
+    }
+  }
+}

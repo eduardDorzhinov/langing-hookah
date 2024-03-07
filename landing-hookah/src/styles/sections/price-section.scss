@@ -1,0 +1,191 @@
+@import 'src/styles/variables';
+
+.price {
+  margin-top: 0;
+  padding-top: 50px;
+
+  &--list {
+    & > li:not(:first-child) {
+      margin-top: 2.19rem;
+    }
+
+    & > li {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.5em;
+      text-align: center;
+      color: $color-black;
+    }
+  }
+
+  &--card {
+    height: fit-content;
+    padding: 1rem;
+    background: $color-background2;
+    margin: 1rem 0 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &_card {
+    &--title {
+      width: 100%;
+      margin: 0.1rem 0 2rem 0.5rem;
+      font-size: 2rem;
+    }
+
+    &--points {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 0 0 2rem;
+
+      &-mobile {
+        display: none;
+
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        margin-bottom: 2rem;
+
+        & > * {
+          min-width: fit-content !important;
+        }
+
+        .price_card {
+          &--point {
+            height: auto;
+            margin-left: -1rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: transparent;
+            box-shadow: none;
+
+            & .price_card--number {
+              font-size: 8rem;
+            }
+          }
+
+          &--row {
+            width: 100%;
+            margin-bottom: 1.8rem;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background-image: linear-gradient(to right, black 18%, rgba(255, 255, 255, 0) 0%);
+            background-position: bottom;
+            background-size: 12px 2px;
+            background-repeat: repeat-x;
+
+            & .price_card--description {
+              margin-bottom: -1.2rem;
+              background: $color-white;
+              padding-right: 1rem;
+            }
+
+            & .price_card--number {
+              color: $color-black;
+              margin-bottom: -1.2rem;
+              background: $color-white;
+              padding-left: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    &--point {
+      width: 13rem;
+      max-width: 20%;
+      height: 9.375rem;
+
+      padding: 1rem;
+
+      display: flex;
+      align-items: center;
+
+      background-color: $color-background5;
+      border-radius: 0.8rem;
+      -webkit-box-shadow: $box-shadow1;
+      -moz-box-shadow: $box-shadow1;
+      box-shadow: $box-shadow1;
+    }
+
+    &--number {
+      line-height: 1em;
+      color: $color-red;
+    }
+
+    &--description {
+      padding-top: 1rem;
+      padding-left: 0.4rem;
+    }
+
+    &--text {
+      margin: 0 0 2rem;
+    }
+
+    &--buttons {
+      display: flex;
+      gap: 1.5rem;
+
+      &-mobile {
+      }
+    }
+  }
+}
+
+// ************ 800px < width < 1000px ************
+@media (max-width: 1000px) {
+  html {
+    font-size: 70%;
+  }
+
+  .price {
+    padding-top: 50px;
+  }
+}
+
+// ************ 500px < width < 800px ************
+@media (max-width: 800px) {
+  .price .container {
+    width: 100vw;
+    padding: 1.56rem 1.125rem;
+  }
+
+  .price_card {
+    background-color: $color-background5;
+    border-radius: 0.8rem;
+    -webkit-box-shadow: $box-shadow2;
+    -moz-box-shadow: $box-shadow2;
+    box-shadow: $box-shadow2;
+
+    &--points {
+      display: none;
+
+      &-mobile {
+        display: flex;
+      }
+    }
+  }
+}
+
+// ************ width < 500px ************
+@media (max-width: 500px) {
+  .price_card {
+    &--buttons-mobile {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  }
+}

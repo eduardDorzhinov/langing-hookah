@@ -1,0 +1,105 @@
+@import '../../styles/variables';
+
+.select {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.mini {
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  margin-left: 1rem;
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $color-red;
+    cursor: pointer;
+  }
+
+  & > svg {
+    position: absolute;
+    top: calc(50% - 0.55rem);
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    z-index: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  & > select {
+    background: none;
+    padding-right: 0.5rem;
+    padding-left: 1.5rem;
+
+    font-size: 0.8125rem;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    border: none;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+
+    z-index: 1;
+
+    &:focus-visible {
+      border: none;
+      outline: none;
+    }
+
+    &:hover {
+      color: inherit;
+      cursor: pointer;
+    }
+  }
+}
+
+.lang {
+  cursor: pointer;
+}
+
+.activeLang {
+  color: red;
+}
+
+.select {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5rem 1.5rem;
+
+  font-size: 0.8125rem;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.safari {
+  & > select {
+    -webkit-appearance: none;
+  }
+}
+
+@media (pointer: coarse) {
+  .mini {
+    &:hover {
+    }
+  }
+}
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+  }
+}

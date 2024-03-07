@@ -1,0 +1,24 @@
+@import 'src/styles/variables';
+
+.gallery {
+  & > .container {
+    width: 100%;
+    max-width: 100vw;
+    height: fit-content;
+
+    padding: 0;
+    margin: 0;
+  }
+
+  &--photo {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+    &-wrap {
+      position: relative;
+      height: 80vh;
+      width: 100vw;
+    }
+  }
+}

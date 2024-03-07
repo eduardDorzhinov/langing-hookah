@@ -1,0 +1,61 @@
+@import 'src/styles/variables';
+
+.card {
+  width: 13rem;
+  max-width: 20%;
+  height: 9.375rem;
+
+  padding: 1rem;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1rem;
+
+  background-color: $color-background5;
+  border-radius: 0.8rem;
+  -webkit-box-shadow: $box-shadow1;
+  -moz-box-shadow: $box-shadow1;
+  box-shadow: $box-shadow1;
+}
+
+.priceWrap {
+  display: flex;
+  align-items: center;
+}
+
+.number {
+  line-height: 1em;
+  color: $color-red;
+}
+
+.description {
+  padding-top: 1rem;
+  padding-left: 0.4rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 5px;
+  height: 20px;
+}
+
+.button {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border-radius: 50%;
+  border: 1.2px solid $color-red;
+  color: $color-red;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:disabled {
+    border: none;
+    color: $color-text2;
+  }
+}
