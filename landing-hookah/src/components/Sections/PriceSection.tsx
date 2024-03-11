@@ -7,7 +7,7 @@ import Button from '@/components/Buttons/Button';
 import { BiPhoneCall } from 'react-icons/bi';
 import { AiOutlineArrowDown } from 'react-icons/ai';
 import FormModal from '@/components/FormModal/FormModal';
-import { PriceItem } from '@/components/PriceItem/PriceItem';
+import { MobilePriceItem, PriceItem } from '@/components/PriceItem/PriceItem';
 
 const SH = 'shisha'
 const HO = 'hours'
@@ -168,29 +168,40 @@ function PriceSection() {
           </div>
 
           <div className="price_card--points-mobile">
-            <p className="price_card--point">
-              <span
-                className="price_card--description text_p1"
-                dangerouslySetInnerHTML={{ __html: t('price-from') }}
-              />
-              <span className="price_card--number title_h1">{t('price-price')}</span>
-              <span className="price_card--description text_p1">€</span>
-            </p>
+            <MobilePriceItem
+              price={price[SH]}
+              name={t(getTranslateDecor(price[SH], SH))}
+              increment={() => increment(SH)}
+              decrement={() => decrement(SH)}
+              disabledInc={price[SH] >= PRICES[SH].to}
+              disabledDec={price[SH] <= PRICES[SH].from}
+            />
 
-            <p className="price_card--row">
-              <span className="price_card--description text_p1">{t('price-shisha-alt')}:</span>
-              <span className="price_card--number title_h1">{t('price-shisha-eq')}</span>
-            </p>
+            <MobilePriceItem
+              price={price[HO]}
+              name={t(getTranslateDecor(price[HO], HO))}
+              increment={() => increment(HO)}
+              decrement={() => decrement(HO)}
+              disabledInc={price[HO] >= PRICES[HO].to}
+              disabledDec={price[HO] <= PRICES[HO].from}
+            />
 
-            <p className="price_card--row">
-              <span className="price_card--description text_p1">{t('price-hours-alt')}:</span>
-              <span className="price_card--number title_h1">{t('price-hours-eq')}</span>
-            </p>
+            <MobilePriceItem
+              price={price[MA]}
+              name={t(getTranslateDecor(price[MA], MA))}
+              increment={() => increment(MA)}
+              decrement={() => decrement(MA)}
+              disabledInc={price[MA] >= PRICES[MA].to}
+              disabledDec={price[MA] <= PRICES[MA].from}
+              shortPriceDescription
+            />
 
-            <p className="price_card--row">
-              <span className="price_card--description text_p1">{t('price-master')}:</span>
-              <span className="price_card--number title_h1">{t('price-master-eq')}</span>
-            </p>
+            <MobilePriceItem
+              price={totalPrice}
+              name={t('price-price-currency')}
+              withUp
+              noButtons
+            />
           </div>
 
           <p className="text_p1 price_card--text">{t('price-people-text')}</p>
