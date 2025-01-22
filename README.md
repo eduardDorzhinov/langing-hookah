@@ -1,1 +1,3 @@
-https://langing-hookah.vercel.app/ru
+Landing for hookah project
+
+Deployed on https://langing-hookah.vercel.app/ru
